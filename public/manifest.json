@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Trade Profit Calculator",
+  "version": "1.0",
+  "description": "A tool to calculate trade profit after fees",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "16.png",
+      "48": "48.png",
+      "128": "128.png"
+    }
+  },
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png"
+  }
+}
