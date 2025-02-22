@@ -1,13 +1,12 @@
-import { useState } from "react";
 import useProfitCalculator from "./useProfitCalculator.ts";
 import "./App.css";
 import formatInputToNumber from "./utils.ts";
-
+import useLocalStorageState from "./useLocalStorageState.ts";
 function App() {
-  const [buyRate, setBuyRate] = useState("0");
-  const [sellRate, setSellRate] = useState("0");
-  const [coin, setCoin] = useState("0");
-  const [fee, setFee] = useState("0.08");
+  const [buyRate, setBuyRate] = useLocalStorageState<string>("buyRate", "0");
+  const [sellRate, setSellRate] = useLocalStorageState<string>("sellRate", "0");
+  const [coin, setCoin] = useLocalStorageState<string>("coin", "0");
+  const [fee, setFee] = useLocalStorageState<string>("fee", "0.08");
 
   const { orderFee, profit } = useProfitCalculator({
     buyPrice: formatInputToNumber(buyRate),
