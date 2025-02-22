@@ -77,7 +77,9 @@ function App() {
           <div className="text-center text-xl font-bold text-red-400">
             <p>
               Fee:{" "}
-              {typeof fee === "number" && isNaN(fee) === false ? orderFee : 0}
+              {typeof orderFee === "number" && isNaN(orderFee) === false
+                ? orderFee
+                : 0}
             </p>
           </div>
         </div>
